@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="p-5">
                     <ul className="flex md:flex-col flex-row gap-5 justify-between">
                         <li>
-                            <Link href="#">
+                            <Link href="/about-us">
                                 <a className="md:text-lg text-base font-normal text-skin-light font-interRegular">About Us</a>
                             </Link>
                         </li>
