@@ -1,6 +1,7 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { useState } from 'react'
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import Head from 'next/head';
 
 function NavLink({to, children}) {
     return <a href={to} className={`mx-4`}>
@@ -29,7 +30,15 @@ function MobileNav({open, setOpen}) {
 export default function Navbar() {
 
     const [open, setOpen] = useState(false)
+
+
     return (
+        <>
+        <Head>
+        <title>FUNDGAZER - BLOG</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
         <nav className="flex filter bg-[#FAF9FD] px-5 py-4 h-20 items-center fixed top-0 left-0 right-0 z-50">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
@@ -60,5 +69,7 @@ export default function Navbar() {
                 </div>
             </div>
         </nav>
+
+        </>
     )
 }
