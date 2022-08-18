@@ -14,7 +14,7 @@ export default function Single_Post() {
                 <div className='container mx-auto pt-28 pb-10'>
                     <div className='flex md:flex-row flex-col gap-16'>
                         {/* Posts Column Start*/}
-                        <div className='md:w-9/12 w-full p-5 md:pl-10'>
+                        <div className='relative w-full px-6 lg:pr-3 md:w-9/12 md:pl-20'>
                             <div className='mb-7'>
                                 <ul className='mb-5'>
                                     <li>
@@ -25,7 +25,7 @@ export default function Single_Post() {
                                 <p className='font-gildaDisplay md:text-2xl text-lg font-normal text-skin-dark mb-5'>In this segment of our ‘Think Like an Investor’ series, we’re going to look at another resource which proves invaluable to the modern investor: blogs.</p>
                             </div>
                             <div className='text-center mb-7'>
-                                <figure className='md:w-[889px] md:h-[395px] w-full h-[179px] relative  mb-3'>
+                                <figure className='md:h-[395px] w-full h-[179px] relative  mb-3'>
                                     <Image src="/images/postBanner.png" alt="postBanner.png" layout='fill'></Image>
                                 </figure>
                                 <span className='font-interRegular text-sm font-normal italic text-skin-muted'>Photo caption if any goes here</span>
@@ -128,7 +128,7 @@ export default function Single_Post() {
                         {/* Posts Column END*/}
 
                         {/* Sidebar Column Start*/}
-                        <div className='md:w-3/12 w-full'>
+                        <div className='md:w-3/12 w-full lg:block hidden'>
                             <Sidebar />
                         </div>
                         {/* Sidebar Column End*/}

@@ -15,7 +15,7 @@ export default function Blog() {
                 </div>
             </section>
             <section className='mb-12 md:mt-28'>
-                <div className='container mx-auto md:pb-10 lg:pl-16'>
+                <div className='container mx-auto md:pb-10'>
                     <div className='flex md:flex-row flex-col gap-10'>
                         {/* Posts Column Start*/}
                         <div className='md:w-9/12 w-full md:pr-20'>
