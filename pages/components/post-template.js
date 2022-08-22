@@ -7,13 +7,13 @@ export default function Post_template() {
       <div className='w-9/12 flex flex-col justify-between p-0'>
         <div>
           <Link href="#">
-            <a><h3 className='md:text-3xl text-base font-bold text-skin-dark mb-3 font-productSansBold'>7 Best Investing Blogs 2022: Think Like an Investor</h3></a>
+            <a><h3 className='md:text-3xl text-base font-bold text-skin-dark mb-3 font-productSansBold hover:underline'>7 Best Investing Blogs 2022: Think Like an Investor</h3></a>
           </Link>
           <ul className='flex space-x-3 md:text-xl text-base font-normal text-skin-primary mb-3 font-productSansReqular'>
-            <li>
+            <li className='hover:underline'>
               <Link href="#"><a>#Economy</a></Link>
             </li>
-            <li>
+            <li className='hover:underline'>
               <Link href="#"><a>#Crypto</a></Link>
             </li>
           </ul>
@@ -31,7 +31,7 @@ export default function Post_template() {
       <div className='w-3/12'>
         <Link href="#"><a>
           <figure className='md:h-[202px] h-[94px] md:w-full w-[93px] relative'>
-            <Image src="/images/img2.png" alt='img2' layout='fill' className='object-cover rounded-lg'></Image>
+            <Image src="/images/img2.png" alt='img2' layout='fill' className='object-cover transition-all duration-300 ease-in-out rounded-lg hover:scale-105'></Image>
           </figure>
         </a></Link>
       </div>

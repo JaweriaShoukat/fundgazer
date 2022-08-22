@@ -102,7 +102,7 @@ export default function Sidebar() {
                                 <a className='text-xs text-skin-muted font-normal font-interRegular'>11 March 2023</a>
                             </Link>
                             <Link href="#">
-                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular'>Best Portfolio InvestmentTips and Tricks</a>
+                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular hover:underline'>Best Portfolio InvestmentTips and Tricks</a>
                             </Link>
                         </li>
                         <li className='py-2 flex flex-col gap-2 mb-5'>
@@ -110,7 +110,7 @@ export default function Sidebar() {
                                 <a className='text-xs text-skin-muted font-normal font-interRegular'>11 March 2023</a>
                             </Link>
                             <Link href="#">
-                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular'>Best Portfolio InvestmentTips and Tricks</a>
+                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular hover:underline'>Best Portfolio InvestmentTips and Tricks</a>
                             </Link>
                         </li>
                         <li className='py-2 flex flex-col gap-2 mb-5'>
@@ -118,7 +118,7 @@ export default function Sidebar() {
                                 <a className='text-xs text-skin-muted font-normal font-interRegular'>11 March 2023</a>
                             </Link>
                             <Link href="#">
-                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular'>Best Portfolio InvestmentTips and Tricks</a>
+                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular hover:underline'>Best Portfolio InvestmentTips and Tricks</a>
                             </Link>
                         </li>
                         <li className='py-2 flex flex-col gap-2 mb-5'>
@@ -126,7 +126,7 @@ export default function Sidebar() {
                                 <a className='text-xs text-skin-muted font-normal font-interRegular'>11 March 2023</a>
                             </Link>
                             <Link href="#">
-                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular'>Best Portfolio InvestmentTips and Tricks</a>
+                                <a className='md:text-2xl text-base text-skin-dark font-normal font-productSansReqular hover:underline'>Best Portfolio InvestmentTips and Tricks</a>
                             </Link>
                         </li>
                     </ul>

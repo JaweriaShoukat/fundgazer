@@ -15,7 +15,7 @@ export default function RelatedPosts() {
                             </figure>
                         </a></Link>
                         <Link href="#"><a>
-                            <h5 className='font-productSansReqular md:text-2xl text-lg font-normal text-skin-dark'>Best Portfolio Investment Tips and Tricks</h5>
+                            <h5 className='font-productSansReqular md:text-2xl text-lg font-normal text-skin-dark hover:underline'>Best Portfolio Investment Tips and Tricks</h5>
                         </a></Link>
                     </div>
                     <div className='flex md:flex-col flex-row-reverse gap-4 items-center md:border-b-0 border-b border-gray-200 md:py-0 py-3'>
@@ -25,7 +25,7 @@ export default function RelatedPosts() {
                             </figure>
                         </a></Link>
                         <Link href="#"><a>
-                            <h5 className='font-productSansReqular md:text-2xl text-lg font-normal text-skin-dark'>Best Portfolio Investment Tips and Tricks</h5>
+                            <h5 className='font-productSansReqular md:text-2xl text-lg font-normal text-skin-dark hover:underline'>Best Portfolio Investment Tips and Tricks</h5>
                         </a></Link>
                     </div>
                     <div className='flex md:flex-col flex-row-reverse gap-4 items-center md:border-b-0 border-b border-gray-200 md:py-0 py-3'>
@@ -35,7 +35,7 @@ export default function RelatedPosts() {
                             </figure>
                         </a></Link>
                         <Link href="#"><a>
-                            <h5 className='font-productSansReqular md:text-2xl text-lg font-normal text-skin-dark'>Best Portfolio Investment Tips and Tricks</h5>
+                            <h5 className='font-productSansReqular md:text-2xl text-lg font-normal text-skin-dark hover:underline'>Best Portfolio Investment Tips and Tricks</h5>
                         </a></Link>
                     </div>
                 </div>
