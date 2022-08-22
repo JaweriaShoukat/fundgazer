@@ -11,17 +11,17 @@ export default function Footer() {
                     <ul className="flex md:flex-col flex-row gap-5 justify-between">
                         <li>
                             <Link href="/about-us">
-                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular">About Us</a>
+                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular hover:underline">About Us</a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/disclaimer">
-                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular">Disclaimer</a>
+                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular hover:underline">Disclaimer</a>
                             </Link>
                         </li>
                         <li>
                             <Link href="privacy-policy">
-                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular">Privacy Policy</a>
+                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular hover:underline">Privacy Policy</a>
                             </Link>
                         </li>
                     </ul>
@@ -30,7 +30,7 @@ export default function Footer() {
                     <ul className='flex md:justify-end justify-center mb-2'>
                         <li>
                             <Link href="mailto:support@fundgazer.com">
-                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular">support@fundgazer.com</a>
+                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular hover:underline">support@fundgazer.com</a>
                             </Link>
                         </li>
                     </ul>
