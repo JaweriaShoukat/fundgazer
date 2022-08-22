@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaMedium, FaTwitterSquare } from 'react-icons/fa'
+import { FaFacebook, FaTwitter, FaInstagram, FaMediumM } from 'react-icons/fa'
+import {GrLinkedinOption} from 'react-icons/gr'
 
 export default function Footer() {
     return (
@@ -36,27 +37,27 @@ export default function Footer() {
                     <ul className="flex space-x-3 md:justify-end justify-center">
                         <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-3xl rounded-full"><FaFacebookSquare /></a>
+                                <a className="text-3xl"><FaFacebook size={24}/></a>
                             </Link>
                         </li>
                         <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-3xl rounded-full"><FaTwitterSquare /> </a>
+                                <a className="text-3xl"><FaTwitter size={24}/> </a>
                             </Link>
                         </li>
                         <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-3xl rounded-full"><FaLinkedin /> </a>
+                                <a className="text-3xl"><GrLinkedinOption size={24}/> </a>
                             </Link>
                         </li>
                         <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-3xl rounded-full"><FaInstagramSquare /> </a>
+                                <a className="text-3xl"><FaInstagram size={24}/> </a>
                             </Link>
                         </li>
                         <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-3xl rounded-full"><FaMedium /> </a>
+                                <a className="text-3xl"><FaMediumM size={24}/> </a>
                             </Link>
                         </li>
                     </ul>

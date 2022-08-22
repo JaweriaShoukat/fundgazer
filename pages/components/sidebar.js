@@ -41,7 +41,7 @@ export default function Sidebar() {
                 </div>
                 <div className='border-b md:px-0 p-5'>
                     <h6 className='text-xl font-bold text-skin-dark mb-5 font-productSansBold'>Popular Tags</h6>
-                    <ul className='flex flex-wrap gap-2 mb-5'>
+                    <ul className='flex flex-wrap gap-2 mb-5 tags'>
                         <li className='py-2'>
                             <Link href="#">
                                 <a className='md:text-base text-xs text-skin-primary font-medium border border-[#6F49DD] rounded-full py-2 px-3 font-interRegular'>#Investment</a>
@@ -90,8 +90,8 @@ export default function Sidebar() {
                     </ul>
                     <h6 className='text-xl font-bold text-skin-dark mb-5 font-productSansBold'>Join Our Community</h6>
                     <div className="flex justify-center gap-4 md:px-0">
-                        <button className='font-interRegular bg-skin-secondry text-skin-light hover:opacity-75 text-sm font-semibold flex items-center space-x-3 py-3 px-7 rounded-md w-full'><BsDiscord /> <span>Discord</span> </button>
-                        <button className='font-interRegular bg-skin-buttonAccent hover:bg-skin-buttonMuted text-skin-light text-sm font-semibold flex items-center space-x-3 py-3 px-7 rounded-md w-full'><FaTelegramPlane /> <span>Telegram</span> </button>
+                        <button className='flex items-center justify-center w-full py-4 space-x-3 text-[15px] tracking-wide rounded-md font-interRegular bg-skin-secondry text-skin-light px-7 transition ease-in-out delay-75 hover:scale-110 hover:bg-skin-primary duration-200'><BsDiscord /> <span>Discord</span> </button>
+                        <button className='flex items-center justify-center w-full py-4 space-x-3 text-[15px] tracking-wide rounded-md font-interRegular bg-skin-buttonAccent text-skin-light px-7 transition ease-in-out delay-75 hover:scale-110 hover:bg-skin-primary duration-200'><FaTelegramPlane /> <span>Telegram</span> </button>
                     </div>
                 </div>
                 <div className='md:px-0 p-5'>

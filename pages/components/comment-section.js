@@ -49,7 +49,7 @@ export default function Comment_Section() {
                                 </ul>
                             </div>
                             <ul>
-                                <li><Link href="#"><a className="font-interRegular md:text-lg text-base font-normal italic text-skin-primary flex gap-2 items-center justify-end">See More Comments <span><BsChevronDown strokeWidth={2} /></span></a></Link></li>
+                                <li><Link href="#"><a className="font-interRegular md:text-lg text-base font-normal italic text-skin-primary flex gap-2 items-center justify-end">See More Comments <span className="animate-bounce"><BsChevronDown strokeWidth={2} /></span></a></Link></li>
                             </ul>
                         </div>
                     </div>

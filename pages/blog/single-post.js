@@ -63,7 +63,7 @@ export default function Single_Post() {
                             </div>
                             <div className='mb-10'>
                                 <h6 className='font-productSansBold md:text-2xl text-xl font-bold text-skin-dark mb-5'>Tags</h6>
-                                <ul className='flex flex-wrap gap-3 mb-5'>
+                                <ul className='flex flex-wrap gap-3 mb-5 tags'>
                                     <li className='py-2'>
                                         <Link href="#">
                                             <a className='md:text-base text-xs text-skin-primary font-medium border border-[#6F49DD] rounded-full py-2 px-3 font-interRegular'>#Investment</a>
