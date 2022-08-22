@@ -34,29 +34,29 @@ export default function Footer() {
                         </li>
                     </ul>
                     <ul className="flex space-x-3 md:justify-end justify-center">
-                        <li>
+                        <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-4xl text-skin-light"><FaFacebookSquare /></a>
+                                <a className="text-3xl rounded-full"><FaFacebookSquare /></a>
                             </Link>
                         </li>
-                        <li>
+                        <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-4xl text-skin-light"><FaTwitterSquare /> </a>
+                                <a className="text-3xl rounded-full"><FaTwitterSquare /> </a>
                             </Link>
                         </li>
-                        <li>
+                        <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-4xl text-skin-light"><FaLinkedin /> </a>
+                                <a className="text-3xl rounded-full"><FaLinkedin /> </a>
                             </Link>
                         </li>
-                        <li>
+                        <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-4xl text-skin-light"><FaInstagramSquare /> </a>
+                                <a className="text-3xl rounded-full"><FaInstagramSquare /> </a>
                             </Link>
                         </li>
-                        <li>
+                        <li className='p-[6px] bg-white text-[#2B195A] hover:text-skin-light rounded-lg transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 hover:bg-skin-primary duration-200'>
                             <Link href="#">
-                                <a className="text-4xl text-skin-light"><FaMedium /> </a>
+                                <a className="text-3xl rounded-full"><FaMedium /> </a>
                             </Link>
                         </li>
                     </ul>
