@@ -11,7 +11,11 @@ export default function Footer() {
                     <ul className="flex md:flex-col flex-row gap-5 justify-between">
                         <li>
                             <Link href="/about-us">
+<<<<<<< HEAD
                                 <a className="md:text-lg text-base font-normal text-skin-light font-interRegular hover:underline">About Us</a>
+=======
+                                <a className="md:text-lg text-base font-normal text-skin-light font-interRegular">About Us</a>
+>>>>>>> main
                             </Link>
                         </li>
                         <li>

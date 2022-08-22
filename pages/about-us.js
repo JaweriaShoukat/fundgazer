@@ -23,4 +23,8 @@ export default function about() {
       </section>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
