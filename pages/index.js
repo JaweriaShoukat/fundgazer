@@ -2,18 +2,38 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BsChevronDown } from 'react-icons/bs'
 import OurCommunity from './our-community'
+import { motion, Variants } from "framer-motion"
 
 export default function Home() {
+
+  
+const imageAnimate={
+  offscreen:{scale:0.5, opacity:0},
+  onscreen:{
+  scale:1,
+  opacity:1,
+  transition: {type:"spring",
+  duration:1}
+}
+
+}
+
   return (
     <>
       {/* Banner Section Start*/}
       <section>
         <div className='container mx-auto lg:h-[800px] pb-10 pt-0 grid lg:grid-cols-3 grid-cols-1 items-center gap-4 mt-20'>
           <div className="flex flex-col justify-between h-full px-4 pt-10 pb-0 lg:pt-20 lg:pb-24">
-            <div className='z-10'>
-              <h1 className='md:text-6xl text-[32px] leading-9 font-medium font-interRegular'>The <span className='text-skin-primary font-bold'>Future</span> of <span className='md:whitespace-nowrap'>Personal Investment.</span></h1>
+          <motion.div
+                    initial={"offscreen"}
+                    whileInView={"onscreen"}
+                    viewport={{once:false, amount:0.5}}
+                    transition={{staggerChildren:0.5}}className='z-10'>
+              <motion.h1 
+                        variants={imageAnimate}
+                         className='md:text-6xl text-[32px] leading-9 font-medium font-interRegular'>The <span className='text-skin-primary font-bold'>Future</span> of <span className='md:whitespace-nowrap'>Personal Investment.</span></motion.h1>
               <p className='md:text-xl text-[15px] font-medium mt-3 font-interRegular'>From building your diversified long-term portfolio and tracking your assets to finding investment ideas, we got you covered.</p>
-            </div>
+            </motion.div>
             <Link href="#">
               <a className='md:flex hidden space-x-2 items-center text-3xl font-semibold mt-5 font-interMedium'><span className='text-skin-primary animate-bounce'><BsChevronDown strokeWidth={2} /> </span> <span>Join Waitlist</span></a>
             </Link>
