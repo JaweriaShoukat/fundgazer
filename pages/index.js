@@ -6,38 +6,61 @@ import { motion, Variants } from "framer-motion"
 
 export default function Home() {
 
-  
-const imageAnimate={
-  offscreen:{scale:0.5, opacity:0},
-  onscreen:{
-  scale:1,
-  opacity:1,
-  transition: {type:"spring",
-  duration:1}
-}
 
-}
+  const imageAnimate = {
+    offscreen: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    onscreen: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 2,
+        bounce: 0.3
+      }
+    }
+
+  }
+  const fadeInLeft = {
+    offscreen: {
+      opacity:0,
+      x: -100,
+    },
+    onscreen: {
+      opacity:1,
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 2,
+        bounce: 0.3
+      }
+    }
+
+  }
 
   return (
     <>
       {/* Banner Section Start*/}
       <section>
         <div className='container mx-auto lg:h-[800px] pb-10 pt-0 grid lg:grid-cols-3 grid-cols-1 items-center gap-4 mt-20'>
-          <div className="flex flex-col justify-between h-full px-4 pt-10 pb-0 lg:pt-20 lg:pb-24">
           <motion.div
-                    initial={"offscreen"}
-                    whileInView={"onscreen"}
-                    viewport={{once:false, amount:0.5}}
-                    transition={{staggerChildren:0.5}}className='z-10'>
-              <motion.h1 
-                        variants={imageAnimate}
-                         className='md:text-6xl text-[32px] leading-9 font-medium font-interRegular'>The <span className='text-skin-primary font-bold'>Future</span> of <span className='md:whitespace-nowrap'>Personal Investment.</span></motion.h1>
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ staggerChildren: 0.5 }}
+            className="flex flex-col justify-between h-full px-4 pt-10 pb-0 lg:pt-20 lg:pb-24">
+            <motion.div
+              variants={imageAnimate}
+              className='z-10'>
+              <h1 className='md:text-6xl text-[32px] leading-9 font-medium font-interRegular'>The <span className='text-skin-primary font-bold'>Future</span> of <span className='md:whitespace-nowrap'>Personal Investment.</span></h1>
               <p className='md:text-xl text-[15px] font-medium mt-3 font-interRegular'>From building your diversified long-term portfolio and tracking your assets to finding investment ideas, we got you covered.</p>
             </motion.div>
             <Link href="#">
               <a className='md:flex hidden space-x-2 items-center text-3xl font-semibold mt-5 font-interMedium'><span className='text-skin-primary animate-bounce'><BsChevronDown strokeWidth={2} /> </span> <span>Join Waitlist</span></a>
             </Link>
-          </div>
+          </motion.div>
           <div className="float-right col-span-2 md:p-4 overflow-x-hidden">
             <div className='md:block hidden'>
               <video
@@ -71,9 +94,16 @@ const imageAnimate={
 
 
       {/* Jion Us Section Start*/}
-      <section className='bg-skin-primary'>
-        <div className='container lg:h-[800px] mx-auto lg:py-20 py-12 grid md:grid-cols-2 grid-cols-1 items-center gap-8'>
-          <div className="p-4 md:order-first order-last lg:mt-0 mt-10">
+      <motion.section
+        initial={"offscreen"}
+        whileInView={"onscreen"}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ staggerChildren: 0.5 }}
+        className='bg-skin-primary'>
+        <div className='container  mx-auto lg:py-20 py-12 grid md:grid-cols-2 grid-cols-1 items-center gap-8'>
+          <motion.div 
+          variants={fadeInLeft}
+          className="p-4 md:order-first order-last lg:mt-0 mt-10">
             <h1 className='md:text-6xl text-[32px] leading-9 font-normal text-[#D1C6FF] font-interRegular'><span className='text-skin-light font-bold'>Join </span> Waitlist</h1>
             <p className='md:text-xl text-[15px] text-skin-light font-normal mt-3 font-interRegular max-w-[500px]'>From building your diversified long-term portfolio and tracking you.</p>
             <div className='mt-8'>
@@ -84,13 +114,13 @@ const imageAnimate={
               </form>
               <button type="submit" className='hidden text-[#D1C6FF] font-interRegular border border-[#D1C6FF] bg-transparent hover:bg-skin-buttonAccent hover:border-transparent md:text-base text-sm font-normal md:flex items-center py-3 px-12 rounded-md mt-5'>I am not a robot</button>
             </div>
-          </div>
+          </motion.div>
           <div className="p-4">
             <h1 className='md:hidden block text-[32px] leading-9 md:text-6xl font-normal text-[#D1C6FF] font-interRegular mb-8'>What is <br></br><span className='text-skin-light font-bold'>Fundgazer?</span></h1>
             <iframe class="w-full aspect-video rounded-lg" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
           </div>
         </div>
-      </section>
+      </motion.section>
       {/* Jion Us Section End*/}
 
       <div className='lg:hidden block'>
