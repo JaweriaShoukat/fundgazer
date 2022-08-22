@@ -29,8 +29,8 @@ export default function OurCommunity() {
                         </Link>
                     </div>
                     <div className="flex flex-wrap items-center md:justify-end justify-center gap-5 p-4">
-                        <button className='md:max-w-[200px] w-full justify-center font-interRegular bg-skin-dark text-skin-light hover:opacity-75 md:text-2xl text-lg font-semibold flex items-center space-x-3 py-3 px-7 rounded-md'><BsDiscord /> <span>Discord</span> </button>
-                        <button className='md:max-w-[200px] w-full justify-center font-interRegular bg-skin-buttonAccent hover:bg-skin-buttonMuted text-skin-light md:text-2xl text-lg font-semibold flex items-center space-x-3 py-3 px-7 rounded-md'><FaTelegramPlane /> <span>Telegram</span> </button>
+                        <button className='md:max-w-[200px] w-full justify-center font-interRegular bg-skin-dark text-skin-light  border-2 border-transparent hover:border-black hover:text-skin-dark hover:bg-transparent md:text-2xl text-lg font-semibold flex items-center space-x-3 py-3 px-7 rounded-md transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-200'><BsDiscord /> <span>Discord</span> </button>
+                        <button className='md:max-w-[200px] w-full justify-center font-interRegular bg-skin-buttonAccent hover:bg-skin-buttonMuted text-skin-light border-2 border-transparent md:text-2xl text-lg font-semibold flex items-center space-x-3 py-3 px-7 rounded-md transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 duration-200'><FaTelegramPlane /> <span>Telegram</span> </button>
                     </div>
                 </div>
             </section>
@@ -39,19 +39,19 @@ export default function OurCommunity() {
             {/* Resources Section Start*/}
             <section className={`bg-[#E9E1FF] ${route.pathname === '/our-community' ? 'block' : 'hidden' }`}>
                 <div className='container mx-auto py-12 md:py-20 grid md:grid-cols-4 grid-cols-1 gap-2'>
-                    <div className='p-4'>
+                    <div className='p-4 transition delay-200 hover:-translate-y-2'>
                         <h5 className='font-interBold md:text-2xl text-xl font-bold flex space-x-2 items-center mb-3'><span className='text-skin-primary'><BiPolygon strokeWidth={2} /> </span> <span>Belong</span></h5>
                         <p className='font-interRegular md:text-xl text-base font-normal text-skin-muted'>Get real-time advice and support from a community of experienced investors and don’t forget to give back!</p>
                     </div>
-                    <div className='p-4'>
+                    <div className='p-4 transition delay-200 hover:-translate-y-2'>
                         <h5 className='font-interBold md:text-2xl text-xl font-bold flex space-x-2 items-center mb-3'><span className='text-skin-primary'><FiLayers strokeWidth={3} /> </span> <span>Resources</span></h5>
                         <p className='font-interRegular md:text-xl text-base font-normal text-skin-muted'>Learn about finance, stocks, crypto and psychology behind building investment strategies and systems.</p>
                     </div>
-                    <div className='p-4'>
+                    <div className='p-4 transition delay-200 hover:-translate-y-2'>
                         <h5 className='font-interBold md:text-2xl text-xl font-bold flex space-x-2 items-center mb-3'><span className='text-skin-primary'><BiPolygon strokeWidth={2} /> </span> <span>Black Box</span></h5>
                         <p className='font-interRegular md:text-xl text-base font-normal text-skin-muted'>Stay ahead of the curve with market alerts powered by our proprietary algorithms.</p>
                     </div>
-                    <div className='p-4'>
+                    <div className='p-4 transition delay-200 hover:-translate-y-2'>
                         <h5 className='font-interBold md:text-2xl text-xl font-bold flex space-x-2 items-center mb-3'><span className='text-skin-primary'><FiClock strokeWidth={3} /> </span> <span>Updates</span></h5>
                         <p className='font-interRegular md:text-xl text-base font-normal text-skin-muted'>Recieve first hand updates on latest financial news and new Fungazer products.</p>
                     </div>
