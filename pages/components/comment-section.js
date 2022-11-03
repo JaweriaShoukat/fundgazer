@@ -11,15 +11,15 @@ export default function Comment_Section() {
                             <h6 className="md:text-xl text-base font-productSansBold font-bold text-skin-dark mb-5">Add New Comment</h6>
                             <form>
                                 <div className="mb-5 ">
-                                    <label for="name" className="md:text-xl text-base font-interRegular font-normal text-skin-muted">User Name</label>
+                                    <label htmlFor="name" className="md:text-xl text-base font-interRegular font-normal text-skin-muted">User Name</label>
                                     <input type="text" id="name" name="name" className="mt-2 w-full border border-gray-200 focus:border-[#6F49DD] outline-none px-3 rounded py-2" />
                                 </div>
                                 <div className="mb-5 ">
-                                    <label for="email" className="md:text-xl text-base font-interRegular font-normal text-skin-muted">Email</label>
+                                    <label htmlFor="email" className="md:text-xl text-base font-interRegular font-normal text-skin-muted">Email</label>
                                     <input type="email" id="email" name="email" className="mt-2 w-full border border-gray-200 focus:border-[#6F49DD] outline-none px-3 rounded py-2" />
                                 </div>
                                 <div className="mb-5 ">
-                                    <label for="comment" className="md:text-xl text-base font-interRegular font-normal text-skin-muted">Your Comment</label>
+                                    <label htmlFor="comment" className="md:text-xl text-base font-interRegular font-normal text-skin-muted">Your Comment</label>
                                     <textarea type="text" id="comment" name="comment" cols="30" rows="10" className="mt-2 w-full border border-gray-200 focus:border-[#6F49DD] outline-none px-3 rounded py-2" ></textarea>
                                 </div>
                                 <button type="submit" className="text-xl font-interBold font-bold text-skin-light bg-skin-primary w-full py-3 rounded">Submit</button>
