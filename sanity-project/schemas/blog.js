@@ -100,6 +100,20 @@ export default {
                 to: [{type: 'author'}]
               }
             ]
-          }
+          },
+          {
+            title: 'Categories',
+            name: 'category',
+            type: 'array',
+            of: [
+              {
+                type: 'reference',
+                to: [
+                  {type: 'category'},
+                  // etc
+                ]
+              }
+            ]
+          },
     ]
 }

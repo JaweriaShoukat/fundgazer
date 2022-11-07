@@ -5,20 +5,17 @@ import FirstBlog from '../components/FirstBlog'
 import Post_template from '../components/post-template'
 import Sidebar from '../components/sidebar'
 import { createClient } from "next-sanity";
-import imageUrlBuilder from '@sanity/image-url'
+//import imageUrlBuilder from '@sanity/image-url'
 
 
 export default function Blog({ blogs }) {
-        
-    const client = createClient({
-        projectId: "squwkgdk",
-        dataset: "production",
-        useCdn: true
-    });
-
-    const builder = imageUrlBuilder(client)
     
-    console.log(builder.image(blogs[0].blogImage).url())
+
+   // const client = createClient({
+   //     projectId: "squwkgdk",
+   //     dataset: "production",
+   //     useCdn: true
+   // });
 
     return (
         <>
@@ -61,7 +58,7 @@ export default function Blog({ blogs }) {
                                                     <Link href="#"><a>Shashank Gupta</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="#"><a>11 March 2023</a></Link>
+                                                    <Link href="#"><a>{item.releaseDate}</a></Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -125,7 +122,7 @@ export async function getServerSideProps(context) {
     const client = createClient({
         projectId: "squwkgdk",
         dataset: "production",
-        useCdn: true
+        useCdn: false
     });
 
     const query = `*[_type == "blog"]`;
