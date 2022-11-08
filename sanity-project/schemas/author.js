@@ -3,15 +3,24 @@ export default {
     type: 'document',
     title: 'Author',
     fields: [
-        {
-            name: 'title',
-            type: 'string',
-            title: 'Title'
+      {
+        name: 'name',
+        type: 'string',
+        title: 'Name',
+      },
+      {
+        name: 'linkedinurl',
+        type: 'string',
+        title: 'Linkedin Url',
+      },
+      {
+        title: 'Author Profile',
+        name: 'authorprofile',
+        type: 'image',
+        options: {
+          hotspot: true, // <-- Defaults to false
         },
-        {
-            name: 'image',
-            type: 'image',
-            title: 'Image'
-        }
-    ]
-}
+      },
+    ],
+  };
+  

@@ -8,15 +8,15 @@ import { createClient } from "next-sanity";
 //import imageUrlBuilder from '@sanity/image-url'
 
 
-export default function Blog({ blogs }) {
-    
+export default function Blog({ blogs, categories, authors }) {
 
-   // const client = createClient({
-   //     projectId: "squwkgdk",
-   //     dataset: "production",
-   //     useCdn: true
-   // });
 
+    // const client = createClient({
+    //     projectId: "squwkgdk",
+    //     dataset: "production",
+    //     useCdn: true
+    // });
+    console.log(blogs)
     return (
         <>
             <section className='mb-12 md:mt-28 mt-20'>
@@ -40,32 +40,36 @@ export default function Blog({ blogs }) {
                                     return <div key={index} className='flex flex-row gap-5 border-b py-3 px-5 md:px-0 mt-12'>
                                         <div className='w-9/12 flex flex-col justify-between p-0'>
                                             <div>
-                                                <Link href="#">
+                                                <Link href={`/blog/${item.slug}`}>
                                                     <a><h3 className='md:text-3xl text-base font-bold text-skin-dark mb-3 font-productSansBold hover:underline'>{item.title}</h3></a>
                                                 </Link>
                                                 <ul className='flex space-x-3 md:text-xl text-base font-normal text-skin-primary mb-3 font-productSansReqular'>
-                                                    <li className='hover:underline'>
-                                                        <Link href="#"><a>#Economy</a></Link>
-                                                    </li>
-                                                    <li className='hover:underline'>
-                                                        <Link href="#"><a>#Crypto</a></Link>
-                                                    </li>
+
+                                                    {item.category.map((category, index) => (
+                                                        <li key={index} className='hover:underline'>
+                                                            <Link href={`/blog/${category.slug}`}><a>#{category.title}</a></Link>
+                                                        </li>
+
+                                                    ))}
                                                 </ul>
                                                 <p className='text-xl font-normal text-skin-muted mb-3 font-gildaDisplay md:block hidden'>{item.metadesc}</p>
                                             </div>
                                             <ul className='flex gap-6 text-[15px] font-normal font-interRegular text-skin-muted mt-6'>
-                                                <li>
-                                                    <Link href="#"><a>Shashank Gupta</a></Link>
+                                                
+                                            
+                                                <li >
+                                                    <Link href="#"><a>{item.author.author.name}</a></Link>
                                                 </li>
+
                                                 <li>
                                                     <Link href="#"><a>{item.releaseDate}</a></Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className='w-3/12'>
-                                            <Link href="#"><a>
-                                                <figure className='md:h-[202px] h-[94px] md:w-full w-[93px] relative'>
-                                                    <Image src="/images/img2.png" alt='img2' layout='fill' className='object-cover transition-all duration-300 ease-in-out rounded-lg hover:scale-105'></Image>
+                                            <Link href={`/blog/${item.slug}`}><a>
+                                                <figure className='md:h-[202px] h-[94px] md:w-full w-[93px] relative rounded-lg'>
+                                                    <Image src={item.blogImage?.asset.url} alt='img2' layout='fill' className='object-cover transition-all duration-300 ease-in-out rounded-lg hover:scale-105'></Image>
                                                 </figure>
                                             </a></Link>
                                         </div>
@@ -73,32 +77,6 @@ export default function Blog({ blogs }) {
 
                                 })}
 
-
-
-
-
-
-
-
-
-
-
-
-{/* 
-
-
-                                <div className='flex flex-row gap-5 border-b py-3 px-5 md:px-0 mt-12'>
-                                    <Post_template></Post_template>
-                                </div>
-                                <div className='flex flex-row gap-5 border-b py-3 px-5 md:px-0 mt-12'>
-                                    <Post_template></Post_template>
-                                </div>
-                                <div className='flex flex-row gap-5 border-b py-3 px-5 md:px-0 mt-12'>
-                                    <Post_template></Post_template>
-                                </div>
-                                <div className='flex flex-row gap-5 border-b py-3 px-5 md:px-0 mt-12'>
-                                    <Post_template></Post_template>
-                                </div> */}
                             </div>
                             {/* All Posts END*/}
 
@@ -125,11 +103,18 @@ export async function getServerSideProps(context) {
         useCdn: false
     });
 
-    const query = `*[_type == "blog"]`;
+    const query = `*[_type == "blog"]
+    {title,metadesc,releaseDate,blogImage{asset->{path,url}},'slug': slug.current,category[]-> {title,'slug': slug.current},
+    author{author->{name,authorprofile{asset->{path,url}}}}}`;
     const blogs = await client.fetch(query);
+
+    const categories = await client.fetch(`*[_type == "category"]`);
+    const authors = await client.fetch(`*[_type == "author"]`);
     return {
         props: {
-            blogs
+            blogs,
+            categories,
+            authors
         }, // will be passed to the page component as props
     }
 }
